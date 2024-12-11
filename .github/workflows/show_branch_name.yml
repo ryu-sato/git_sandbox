@@ -7,6 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - use: checkout
+      - use: actions/checkout
       - run: echo ${{ github.ref }}
       - run: echo `git branch --remotes | grep origin/rc/[0-9]* | tr -d ' ' || echo -n ""`
