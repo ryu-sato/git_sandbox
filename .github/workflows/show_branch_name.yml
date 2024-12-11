@@ -8,3 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ github.ref }}
+      - run: echo `git branch --remotes | grep origin/rc/[0-9]* | tr -d ' ' || echo -n ""`
