@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - run: echo ${{ github.ref }}
-      - run: echo `git branch --remotes | grep origin/rc/[0-9]* | tr -d ' ' || echo -n ""`
+      - run: echo `git branch --remotes | tr -d ' ' || echo -n ""`
