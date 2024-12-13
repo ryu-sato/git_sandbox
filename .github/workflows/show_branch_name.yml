@@ -8,5 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - run: echo ${{ github.ref }}
+      - name: github.ref
+        run: echo ${{ github.ref }}
+      - name: github.ref_name
+        run: echo ${{ github.ref_name }}
       - run: echo `git branch --remotes | tr -d ' ' || echo -n ""`
